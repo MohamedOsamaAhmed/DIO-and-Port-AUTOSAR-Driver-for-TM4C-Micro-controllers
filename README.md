@@ -10,9 +10,12 @@ The main function is toggling Led using Button as an input with specific require
 
 ## What is need to done ?
 >1-	Build **MCAL** contains **DIO** and **Timer** drivers 
-2-	Build **ECUAL** contains **Led** and **Button** drivers
-3-	Build **Services** layer contains **Scheduler**
-4-	Build **Application** contains **System Logic**
+
+>2-	Build **ECUAL** contains **Led** and **Button** drivers
+
+>3-	Build **Services** layer contains **Scheduler**
+
+>4-	Build **Application** contains **System Logic**
 
 ## Project Layers
 ![alt text](https://github.com/MohamedOsamaAhmed/DIO-and-Port-AUTOSAR-Driver-for-TM4C-Micro-controllers/blob/main/ProjectLayers.jpg?raw=true)
