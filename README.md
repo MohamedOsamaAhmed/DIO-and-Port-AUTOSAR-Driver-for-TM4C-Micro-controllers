@@ -77,7 +77,7 @@ The main function is toggling Led when button is pressed, refresh Led status eve
 ```
 In requirements we have only to periods of time 40 and 60ms, so Why do we check on 100 and 120ms?
     1-	Because this is period when all actions in the scheduler occur together this enable us to make sure our system is working properly without any problems.
-    2-	As we checked on 120ms we must check 100ms as it is a multiple of 20ms which is the used in our application in BUTTON_refreshState fuction as shown 
+    2-	As we checked on 120ms we must check 100ms as it is a multiple of 20ms which is the used in our application in BUTTON_refreshState fuction as **shown** 
 ```
 uint8 state = Dio_ReadChannel(DioConf_SW1_CHANNEL_ID_INDEX);
     
@@ -118,5 +118,5 @@ So we refresh button state every 60ms but we call the function every 20ms that i
 So I recommend you to use any tool helps you I suggest to use this tool of my friend which is perfect in this job form [here](https://github.com/autosar-drivers/autosar-drivers.github.io) 
 
 ## Conclusion 
-    Writing AUTOSAR driver is not an impossible thing to do it is easy to need many lines of code than you actually need to support all features used and no used. Also applying AUTOSAR standard is for abstraction that is one of the main purpose for it. So if you are work in any project or company and you needn’t to write AUTOSAR standard don’t cost yourself to write code you will not use it only use your clear way to express solution. 
+#### Writing AUTOSAR driver is not an impossible thing to do it is easy to need many lines of code than you actually need to support all features used and no used. Also applying AUTOSAR standard is for abstraction that is one of the main purpose for it. So if you are work in any project or company and you needn’t to write AUTOSAR standard don’t cost yourself to write code you will not use it only use your clear way to express solution. 
 
