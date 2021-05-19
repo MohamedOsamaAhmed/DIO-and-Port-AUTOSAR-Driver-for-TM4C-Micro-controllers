@@ -118,5 +118,5 @@ So we refresh button state every 60ms but we call the function every 20ms that i
 So I recommend you to use any tool helps you I suggest to use this tool of my friend which is perfect in this job form [here](https://github.com/autosar-drivers/autosar-drivers.github.io) 
 
 ## Conclusion 
-#### Writing AUTOSAR driver is not an impossible thing to do it is easy to need many lines of code than you actually need to support all features used and no used. Also applying AUTOSAR standard is for abstraction that is one of the main purpose for it. So if you are work in any project or company and you needn’t to write AUTOSAR standard don’t cost yourself to write code you will not use it only use your clear way to express solution. 
+#### Writing AUTOSAR driver is not an impossible thing to do it is so easy to do it is only need many lines of code than you actually need to support all features used and not used. Also applying AUTOSAR standard for abstraction that is one of the main purpose for it. So if you are working in any project or company and you needn’t to write AUTOSAR standard don’t cost yourself to write code you will not use it only use your clear way to express solution. 
 
