@@ -153,6 +153,8 @@
 #define PORT_DATA_REG_OFFSET              0x3FC
 #define PORT_DIR_REG_OFFSET               0x400
 #define PORT_ALT_FUNC_REG_OFFSET          0x420
+#define PORT_OPEN_DRAIN_REG_OFFSET        0x50C
+#define PORT_SLEW_RATE_REG_OFFSET         0x518
 #define PORT_PULL_UP_REG_OFFSET           0x510
 #define PORT_PULL_DOWN_REG_OFFSET         0x514
 #define PORT_DIGITAL_ENABLE_REG_OFFSET    0x51C
@@ -234,15 +236,28 @@
 
 
 /* Port Pin MODE values  */
-#define PORT_PIN_MODE_DIO		        (Port_PinModeType)0
+#define PORT_PIN_MODE_DIO           (Port_PinModeType)0
 #define PORT_PIN_MODE_ADC		        (Port_PinModeType)1
-#define PORT_PIN_MODE_CAN		        (Port_PinModeType)2
-#define PORT_PIN_MODE_GPT		        (Port_PinModeType)3
-#define PORT_PIN_MODE_WDG		        (Port_PinModeType)4
-#define PORT_PIN_MODE_SSI	          (Port_PinModeType)5
-#define PORT_PIN_MODE_I2C		        (Port_PinModeType)6
-#define PORT_PIN_MODE_PWM		        (Port_PinModeType)7
-#define PORT_PIN_MODE_UART          (Port_PinModeType)8
+#define PORT_PIN_MODE_COMP		      (Port_PinModeType)2
+#define PORT_PIN_MODE_CAN		        (Port_PinModeType)3
+#define PORT_PIN_MODE_I2C		        (Port_PinModeType)4
+#define PORT_PIN_MODE_USB		        (Port_PinModeType)5
+#define PORT_PIN_MODE_M0PWMx		    (Port_PinModeType)6
+#define PORT_PIN_MODE_M1PWMx		    (Port_PinModeType)7
+#define PORT_PIN_MODE_TxCCPx		    (Port_PinModeType)8
+#define PORT_PIN_MODE_SSI1	        (Port_PinModeType)9
+#define PORT_PIN_MODE_SSI2	        (Port_PinModeType)10
+#define PORT_PIN_MODE_SSI3	        (Port_PinModeType)11
+#define PORT_PIN_MODE_UART          (Port_PinModeType)12
+#define PORT_PIN_MODE_U1CTS         (Port_PinModeType)13
+#define PORT_PIN_MODE_U1RTS         (Port_PinModeType)14
+#define PORT_PIN_MODE_U1Rx          (Port_PinModeType)15
+#define PORT_PIN_MODE_U1Tx          (Port_PinModeType)16
+#define PORT_PIN_MODE_CORE		      (Port_PinModeType)17
+#define PORT_PIN_MODE_NMI		        (Port_PinModeType)18
+#define PORT_PIN_MODE_QEI		        (Port_PinModeType)19
+#define PORT_PIN_MODE_JTAG		      (Port_PinModeType)20
+
 
 /* Port pin type, pins number is MCU specific. */
 
@@ -292,6 +307,56 @@ typedef struct
 	  uint8 Pin_Mode_Change; /* Pin mode changeable during runtime?.*/
 }Port_Pin_ConfigType;
 
+/* Possible values of the GPIO enable */
+typedef enum
+{
+  PORT_GPIO_DISABLED, 
+	PORT_GPIO_ENABLED
+} Port_GpioEnableType;
+
+/* Possible values of the Digital enable */
+typedef enum
+{
+  PORT_DIGITAL_DISABLED, 
+	PORT_DIGITAL_ENABLED
+} Port_DigitalEnableType;
+
+/* Possible values of the Analog enable */
+typedef enum
+{
+  PORT_ANALOG_DISABLED, 
+	PORT_ANALOG_ENABLED
+} Port_AnalogEnableType;
+
+/* Possible values of the Open Drain enable */
+typedef enum
+{
+  PORT_OPEN_DRAIN_DISABLED, 
+	PORT_OPEN_DRAIN_ENABLED
+} Port_OpenDrainSelectType;
+
+/* Possible values of the Slew Rate enable */
+typedef enum
+{
+	PORT_SLEW_RATE_DISABLED, 
+	PORT_SLEW_RATE_ENABLED
+} Port_SlewRateSelectType;
+
+
+/* Type of the external data structure containing the modes data. */
+typedef struct 
+{
+	Port_GpioEnableType 		  Gpio_Enable;
+  Port_DigitalEnableType 		Digital_Enable;
+  Port_AnalogEnableType     Analog_Enable;
+	Port_OpenDrainSelectType 	Open_Drain;
+  Port_SlewRateSelectType 	Slew_Rate;
+} Port_ConfigMode;
+
+typedef struct
+{
+	Port_ConfigMode modes[PORT_MAX_PIN_NUM];
+} Port_ConfiguredModesType;
  /*Type of the external data structure containing the initialization data for this module*/
 typedef struct {
 	 Port_Pin_ConfigType Pin_config[PORT_MAX_PIN_NUM];
@@ -356,6 +421,7 @@ void Port_SetPinDirection(Port_PinType Pin, Port_PinDirectionType Direction);
 * Description: Refreshes port direction.
 ************************************************************************************/
 void Port_RefreshPortDirection(void);
+
 
 
 extern const Port_ConfigType Port_Configuration;

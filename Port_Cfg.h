@@ -47,30 +47,39 @@
 #define PORT_NUMBER_OF_PORT_PINS                (43U)                   
 
 /* Number of configured port modes */
-#define PORT_CONFIG_MODE_NUM                    (9U)
+#define PORT_CONFIG_MODE_NUM                    (21U)
 
 
 #define PORT_MIN_PIN_NUM                          (0U)
 #define PORT_MAX_PIN_NUM                          (43U) 
 
 
-
+/* Modes Defines */
 
 /*      Pin Mode Value 
 *  You can select one of these values:
-*                           PORT_PIN_MODE_DIO		  
-*                           PORT_PIN_MODE_ADC		 
-*                           PORT_PIN_MODE_CAN		 
-*                           PORT_PIN_MODE_GPT		 
-*                           PORT_PIN_MODE_WDG		 
-*                           PORT_PIN_MODE_FLEXRAY
-*                           PORT_PIN_MODE_ICU		 
-*                           PORT_PIN_MODE_LIN		 
-*                           PORT_PIN_MODE_MEM		 
-*                           PORT_PIN_MODE_PWM		 
-*                           PORT_PIN_MODE_SPI		 
-*                           PORT_PIN_MODE_UART   
-*
+*       PORT_PIN_MODE_DIO		
+*       PORT_PIN_MODE_ADC		
+*       PORT_PIN_MODE_COMP	
+*       PORT_PIN_MODE_CAN		
+*       PORT_PIN_MODE_I2C		
+*       PORT_PIN_MODE_USB		
+*       PORT_PIN_MODE_M0PWMx
+*       PORT_PIN_MODE_M1PWMx
+*       PORT_PIN_MODE_TxCCPx
+*       PORT_PIN_MODE_SSI1	
+*       PORT_PIN_MODE_SSI2	
+*       PORT_PIN_MODE_SSI3	
+*       PORT_PIN_MODE_UART  
+*       PORT_PIN_MODE_U1CTS 
+*       PORT_PIN_MODE_U1RTS 
+*       PORT_PIN_MODE_U1Rx  
+*       PORT_PIN_MODE_U1Tx  
+*       PORT_PIN_MODE_CORE	
+*       PORT_PIN_MODE_NMI		
+*       PORT_PIN_MODE_QEI		
+*       PORT_PIN_MODE_JTAG	
+*       
 */
 #define Port_A_Pin_0_MODE           PORT_PIN_MODE_DIO
 #define Port_A_Pin_1_MODE           PORT_PIN_MODE_DIO
@@ -379,6 +388,270 @@
 #define Port_F_Pin_2_MODE_CHANG          STD_OFF
 #define Port_F_Pin_3_MODE_CHANG          STD_OFF
 #define Port_F_Pin_4_MODE_CHANG          STD_OFF  /* Button Pin */
+
+
+
+/* Possible values of the GPIO_Type {PORT_GPIO_DISABLED, PORT_GPIO_ENABLED} */
+#define Port_A_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_1_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_4_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_5_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_6_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_A_Pin_7_GPIO_Type          PORT_GPIO_ENABLED
+
+#define Port_B_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_1_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_4_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_5_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_6_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_B_Pin_7_GPIO_Type          PORT_GPIO_ENABLED
+
+#define Port_C_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_1_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_4_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_5_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_6_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_C_Pin_7_GPIO_Type          PORT_GPIO_ENABLED
+
+#define Port_D_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_1_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_4_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_5_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_6_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_D_Pin_7_GPIO_Type          PORT_GPIO_ENABLED
+
+#define Port_E_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_E_Pin_1_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_E_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_E_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_E_Pin_4_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_E_Pin_5_GPIO_Type          PORT_GPIO_ENABLED
+
+#define Port_F_Pin_0_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_F_Pin_1_GPIO_Type          PORT_GPIO_ENABLED  /* LED Pin */
+#define Port_F_Pin_2_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_F_Pin_3_GPIO_Type          PORT_GPIO_ENABLED
+#define Port_F_Pin_4_GPIO_Type          PORT_GPIO_ENABLED  /* Button Pin */
+
+
+/* Possible values of the Digital Enable Type{ PORT_DIGITAL_DISABLED, PORT_DIGITAL_ENABLED} */
+#define Port_A_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_5_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_6_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_A_Pin_7_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+
+#define Port_B_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_5_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_6_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_B_Pin_7_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+
+#define Port_C_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_5_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_6_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_C_Pin_7_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+
+#define Port_D_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_5_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_6_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_D_Pin_7_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+
+#define Port_E_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_E_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_E_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_E_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_E_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_E_Pin_5_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+
+#define Port_F_Pin_0_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_F_Pin_1_Port_DigitalEnableType         PORT_DIGITAL_ENABLED  /* LED Pin */
+#define Port_F_Pin_2_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_F_Pin_3_Port_DigitalEnableType         PORT_DIGITAL_ENABLED
+#define Port_F_Pin_4_Port_DigitalEnableType         PORT_DIGITAL_ENABLED  /* Button Pin */
+
+/* Possible values of  Analog Enable Type { PORT_ANALOG_DISABLED, PORT_ANALOG_ENABLED } */
+#define Port_A_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_5_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_6_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_A_Pin_7_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+
+#define Port_B_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_5_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_6_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_B_Pin_7_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+
+#define Port_C_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_5_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_6_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_C_Pin_7_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+
+#define Port_D_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_5_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_6_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_D_Pin_7_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+
+#define Port_E_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_E_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_E_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_E_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_E_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_E_Pin_5_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+
+#define Port_F_Pin_0_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_F_Pin_1_Port_AnalogEnableType         PORT_ANALOG_DISABLED  /* LED Pin */
+#define Port_F_Pin_2_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_F_Pin_3_Port_AnalogEnableType         PORT_ANALOG_DISABLED
+#define Port_F_Pin_4_Port_AnalogEnableType         PORT_ANALOG_DISABLED  /* Button Pin */
+
+
+
+/* Possible values of the Open Drain Select Type {PORT_OPEN_DRAIN_DISABLED, PORT_OPEN_DRAIN_ENABLED}*/
+#define Port_A_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_5_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_6_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_A_Pin_7_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+
+#define Port_B_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_5_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_6_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_B_Pin_7_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+
+#define Port_C_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_5_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_6_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_C_Pin_7_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+
+#define Port_D_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_5_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_6_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_D_Pin_7_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+
+#define Port_E_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_E_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_E_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_E_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_E_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_E_Pin_5_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+
+#define Port_F_Pin_0_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_F_Pin_1_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED  /* LED Pin */
+#define Port_F_Pin_2_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_F_Pin_3_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED
+#define Port_F_Pin_4_OpenDrainSelectType          PORT_OPEN_DRAIN_DISABLED  /* Button Pin */
+
+
+
+
+
+
+/* Possible values of the Slew Rate Select Type {PORT_SLEW_RATE_DISABLED, PORT_SLEW_RATE_ENABLED} */
+#define Port_A_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_5_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_6_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_A_Pin_7_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+
+#define Port_B_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_5_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_6_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_B_Pin_7_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+
+#define Port_C_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_5_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_6_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_C_Pin_7_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+
+#define Port_D_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_5_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_6_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_D_Pin_7_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+
+#define Port_E_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_E_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_E_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_E_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_E_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_E_Pin_5_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+
+#define Port_F_Pin_0_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_F_Pin_1_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED  /* LED Pin */
+#define Port_F_Pin_2_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_F_Pin_3_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED
+#define Port_F_Pin_4_Port_SlewRateSelectType         PORT_SLEW_RATE_DISABLED  /* Button Pin */
+
+
+
+
 
 
 #endif

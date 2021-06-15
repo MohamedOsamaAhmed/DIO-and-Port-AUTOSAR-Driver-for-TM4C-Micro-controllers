@@ -33,7 +33,7 @@ void BUTTON_refreshState(void)
     
     if(state == BUTTON_PRESSED)
     {
-        g_Pressed_Count++;
+    g_Pressed_Count++;
 	g_Released_Count = 0;
     }
     else
